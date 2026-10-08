@@ -1,233 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kamogelo Bantsheng — Applications Developer</title>
-  <meta name="description" content="Kamogelo Bantsheng is an applications developer and ICT graduate from Sol Plaatje University, working with Python, Java, JavaScript, React, and MySQL.">
+  <!-- SEO Meta Tags -->
+  <title>Kamogelo Bantsheng | Applications Developer & ICT Graduate</title>
+  <meta name="description" content="Portfolio of Kamogelo Bantsheng - ICT Graduate in Applications Development from Sol Plaatje University. Skilled in Python, Java, JavaScript, React, MySQL, and modern systems architecture.">
+  <meta name="keywords" content="Kamogelo Bantsheng, Applications Developer, ICT Graduate, Sol Plaatje University, Junior Developer, Python, Java, React, South Africa Tech, Kimberley">
   <meta name="author" content="Kamogelo Bantsheng">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kamogelo Bantsheng — Applications Developer">
-  <meta property="og:description" content="Applications developer and ICT graduate from Sol Plaatje University based in Kimberley, South Africa.">
+  
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Kamogelo Bantsheng | Applications Developer & ICT Graduate">
+  <meta property="og:description" content="Purpose-driven ICT graduate from Sol Plaatje University. Applications developer, systems problem solver, and future tech leader.">
   <meta property="og:url" content="https://kamogelobantsheng.github.io/portfolio/">
+  <meta name="theme-color" content="#08090d">
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='42' font-weight='700' fill='white'>KB</text></svg>">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='42' font-weight='800' fill='white'>KB</text></svg>">
 
-  <!-- Inter & JetBrains Mono Fonts -->
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Site Navigation -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#about" class="brand">
-        <span class="brand-text">kamogelo.dev</span>
+  <!-- Ambient Glow & Cyber Grid -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Kamogelo Bantsheng Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">KB</span>
+        <span class="brand-slash">/</span>
+        <span class="brand-bracket">&gt;</span>
+        <span class="status-dot-pulse" title="Available for opportunities"></span>
       </a>
 
-      <nav class="nav" id="navMenu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
 
-      <div class="header-right">
-        <button id="openCvBtn" class="btn btn-sm btn-ghost">
-          <span>Curriculum Vitae</span>
-          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      <!-- Nav Actions (CV Button & Mobile Menu) -->
+      <div class="nav-actions">
+        <!-- View Resume Modal Trigger -->
+        <button id="openCvBtn" class="btn btn-outline btn-sm">
+          <span>View CV</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
         </button>
-        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="btn-icon mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main class="main">
+  <!-- Main Content -->
+  <main>
 
-    <!-- About / Intro Section -->
-    <section id="about" class="section intro-section">
-      <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="section hero-section">
+      <div class="container hero-container">
         
-        <div class="intro-header">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span>Available for graduate roles & internships (2026/2027)</span>
+        <div class="hero-content">
+          <!-- Availability Pill Badge -->
+          <div class="hero-badge-wrapper">
+            <span class="badge badge-gradient">
+              <span class="badge-status-dot"></span>
+              Available for Graduate Programmes & Junior Roles • 2026/2027
+            </span>
           </div>
 
-          <h1 class="intro-name">Kamogelo Bantsheng</h1>
-          <p class="intro-role">Applications Developer • ICT Graduate • Kimberley, South Africa</p>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Kamogelo Bantsheng</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-static">Specializing in</span>
+            <span class="role-dynamic gradient-accent" id="dynamicRole">Applications Development</span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Purpose-driven <strong>ICT Graduate</strong> from Sol Plaatje University with a completed National Diploma and an Advanced Diploma in progress. I build clean, high-performance software and bring discipline, analytical rigor, and relentless curiosity to modern engineering teams.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Connect</span>
+            </a>
+            <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="Visit GitHub Profile">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Quick Stats Counter Strip -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number">70%+</span>
+              <span class="stat-label">Academic Scored Average</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">SPU</span>
+              <span class="stat-label">Sol Plaatje University</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Core Languages</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">ZA</span>
+              <span class="stat-label">Kimberley, South Africa</span>
+            </div>
+          </div>
         </div>
 
-        <div class="intro-bio">
-          <p>
-            I am a software developer and ICT graduate from <strong>Sol Plaatje University (SPU)</strong>. I completed my National Diploma in ICT (Applications Development) with multiple distinctions, and I am currently finishing my Advanced Diploma.
-          </p>
-          <p>
-            My work focuses on building clean, practical applications. I enjoy writing backend APIs and services in <strong>Python</strong> and <strong>Java</strong>, designing relational databases with <strong>MySQL</strong>, and creating responsive web interfaces using <strong>JavaScript</strong> and <strong>React</strong>.
-          </p>
-          <p>
-            I am currently looking for full-time graduate software engineering positions, developer internships, and junior roles starting in 2026/2027. I am based in Kimberley and open to relocation or remote opportunities across South Africa.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="intro-links">
-          <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" class="link-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>github.com/KamogeloBantsheng</span>
-          </a>
-          <a href="https://www.linkedin.com/in/kamogelo-bantsheng-676451348" target="_blank" rel="noopener noreferrer" class="link-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            <span>LinkedIn Profile</span>
-          </a>
-          <a href="mailto:kamogelobantsheng@gmail.com" class="link-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <span>kamogelobantsheng@gmail.com</span>
-          </a>
+        <!-- Hero Visual: Vibe Code Window -->
+        <div class="hero-visual">
+          <div class="code-window glass-card">
+            <div class="code-window-header">
+              <div class="window-controls">
+                <span class="control-dot red"></span>
+                <span class="control-dot yellow"></span>
+                <span class="control-dot green"></span>
+              </div>
+              <span class="window-title">developer_profile.json</span>
+              <span class="window-lang">JSON</span>
+            </div>
+            <div class="code-window-body">
+              <pre><code id="profileCodeSnippet">{
+  <span class="code-key">"developer"</span>: <span class="code-str">"Kamogelo Bantsheng"</span>,
+  <span class="code-key">"focus"</span>: <span class="code-str">"Applications Development"</span>,
+  <span class="code-key">"qualification"</span>: <span class="code-str">"Diploma & Advanced Diploma in ICT"</span>,
+  <span class="code-key">"institution"</span>: <span class="code-str">"Sol Plaatje University"</span>,
+  <span class="code-key">"status"</span>: <span class="code-str">"Ready for Graduate Engineering Roles"</span>,
+  <span class="code-key">"stack"</span>: [
+    <span class="code-str">"Python"</span>, <span class="code-str">"Java"</span>, <span class="code-str">"JavaScript"</span>, <span class="code-str">"React"</span>, <span class="code-str">"MySQL"</span>
+  ],
+  <span class="code-key">"mindset"</span>: <span class="code-str">"High Velocity & Deep Problem Solving"</span>,
+  <span class="code-key">"availability"</span>: <span class="code-str">"February 2027 (Immediate Grad Intake)"</span>
+}</code></pre>
+            </div>
+            <div class="code-window-footer">
+              <div class="floating-tech-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Python</span>
+              </div>
+              <div class="floating-tech-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                <span>Java</span>
+              </div>
+              <div class="floating-tech-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+                <span>React</span>
+              </div>
+              <div class="floating-tech-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4 6h16v12H4z"/></svg>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
+    <!-- Recruiter Fast-Track Banner -->
+    <section class="section-compact">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-desc">Selected applications and systems I have engineered.</p>
-
-        <div class="projects-list">
-
-          <!-- Project 1: AcademicPulse -->
-          <article class="project-entry">
-            <div class="project-header">
-              <h3 class="project-name">AcademicPulse</h3>
-              <div class="project-meta">
-                <span class="meta-tag">FastAPI</span>
-                <span class="meta-tag">Python 3.14</span>
-                <span class="meta-tag">SQLite (3NF)</span>
-                <span class="meta-tag">Pytest</span>
-                <span class="meta-tag">Vanilla JS</span>
+        <div class="recruiter-banner glass-card glow-border">
+          <div class="recruiter-icon-col">
+            <div class="badge-icon-large">
+              <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="recruiter-content-col">
+            <div class="recruiter-pill">Recruiter & Talent Acquisition Fast-Track</div>
+            <h2 class="recruiter-title">Candidate Profile for Graduate Engineering Roles</h2>
+            <p class="recruiter-text">
+              Unemployed South African graduate by birth with less than two years of formal work experience, meeting all statutory and cohort eligibility criteria for graduate development programmes, internships, and junior developer pipelines starting <strong>February 2027</strong> (or immediate graduate intake).
+            </p>
+            <div class="recruiter-checklist">
+              <div class="check-item">
+                <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>National Diploma Completed with Multiple Distinctions</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Advanced Diploma in Progress at Sol Plaatje University</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Demonstrated Learning Velocity & Strong Work Ethic</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Open to Relocation or Remote Work Across South Africa</span>
               </div>
             </div>
-
-            <p class="project-summary">
-              A full-stack academic operations platform for university students. It tracks course modules, calculates continuous assessment weighted marks in real-time, and manages task backlogs via an interactive Kanban board.
-            </p>
-
-            <ul class="project-points">
-              <li>Engineered a normalized SQLite schema with foreign key constraints and automated seed data based on the Sol Plaatje University ICT curriculum.</li>
-              <li>Built asynchronous REST API endpoints with FastAPI and Pydantic v2 validation, featuring auto-generated OpenAPI documentation.</li>
-              <li>Includes an automated test suite with pytest verifying course calculations, task status transitions, and HTTP responses.</li>
-            </ul>
-
-            <div class="project-links">
-              <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" class="btn-text">
-                <span>View on GitHub</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 2: Personal Portfolio -->
-          <article class="project-entry">
-            <div class="project-header">
-              <h3 class="project-name">Developer Portfolio</h3>
-              <div class="project-meta">
-                <span class="meta-tag">HTML5</span>
-                <span class="meta-tag">CSS3</span>
-                <span class="meta-tag">JavaScript</span>
-                <span class="meta-tag">GitHub Pages</span>
-              </div>
-            </div>
-
-            <p class="project-summary">
-              This portfolio website. Built from scratch with semantic HTML, custom CSS, and zero external runtime libraries or build steps. Hosted on GitHub Pages with automated deployment.
-            </p>
-
-            <div class="project-links">
-              <a href="https://github.com/KamogeloBantsheng/portfolio" target="_blank" rel="noopener noreferrer" class="btn-text">
-                <span>Repository</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 3: SPU Advanced Diploma Capstone -->
-          <article class="project-entry">
-            <div class="project-header">
-              <h3 class="project-name">Advanced Diploma Capstone Project (NRPJ740)</h3>
-              <div class="project-meta">
-                <span class="meta-tag">Django / Python</span>
-                <span class="meta-tag">REST Framework</span>
-                <span class="meta-tag">Docker</span>
-                <span class="meta-tag">Frontend</span>
-              </div>
-            </div>
-
-            <p class="project-summary">
-              My final-year capstone project for the Advanced Diploma in ICT at Sol Plaatje University. Implements a modular full-stack architecture with a containerized backend, serializers, custom apps, and automated linting.
-            </p>
-
-            <div class="project-links">
-              <span class="subtle-note">Academic Capstone • In progress</span>
-            </div>
-          </article>
-
+          </div>
+          <div class="recruiter-cta-col">
+            <a href="mailto:kamogelobantsheng@gmail.com?subject=Graduate%20Opportunity%20-%20Kamogelo%20Bantsheng" class="btn btn-primary btn-block">
+              <span>Send Interview Invitation</span>
+            </a>
+            <a href="#contact" class="btn btn-outline btn-block">
+              <span>Contact Directly</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
+    <!-- About Me Section -->
+    <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">Education</h2>
-        <p class="section-desc">Academic qualifications from Sol Plaatje University in Kimberley.</p>
+        <div class="section-header text-center">
+          <span class="section-tag">Engineering Mindset</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">
+            Problem solver, mentor, and emerging engineer focused on robust software development and systems thinking.
+          </p>
+        </div>
 
-        <div class="edu-list">
-
-          <div class="edu-entry">
-            <div class="edu-header">
-              <div>
-                <h3 class="edu-degree">Advanced Diploma in ICT (Applications Development)</h3>
-                <span class="edu-school">Sol Plaatje University • Kimberley, South Africa</span>
-              </div>
-              <span class="edu-date">2026 – Present</span>
-            </div>
-            <p class="edu-desc">
-              Advanced postgraduate study focusing on enterprise systems architecture, software engineering methodologies, distributed systems, and real-world system integration.
+        <div class="about-grid">
+          <!-- Text Story -->
+          <div class="about-text-card glass-card">
+            <h3 class="card-heading">Building Software with Clarity and Purpose</h3>
+            <p>
+              I am an <strong>Applications Development graduate</strong> from <strong>Sol Plaatje University</strong>, equipped with a completed National Diploma and actively completing an Advanced Diploma.
             </p>
+            <p>
+              My approach to technology is centered on performance, clarity, and real-world value. Whether dissecting complex algorithms, structuring relational database schemas, or debugging edge cases in applications, I bring accountability, focus, and a growth mindset to every project.
+            </p>
+            <p>
+              My goal is to join a forward-thinking software engineering team or graduate cohort where I can build production systems, absorb high-standard engineering patterns, and accelerate my trajectory as a software developer.
+            </p>
+            
+            <div class="quote-card">
+              <p class="quote-text">
+                "The best time to start was yesterday. The next best time is now."
+              </p>
+              <span class="quote-author">— Guiding Principle</span>
+            </div>
           </div>
 
-          <div class="edu-entry">
-            <div class="edu-header">
-              <div>
-                <h3 class="edu-degree">National Diploma in ICT (Applications Development)</h3>
-                <span class="edu-school">Sol Plaatje University • Kimberley, South Africa</span>
+          <!-- Key Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card glass-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
               </div>
-              <span class="edu-date">2023 – 2025</span>
+              <div class="pillar-content">
+                <h4>Learning Velocity</h4>
+                <p>Advanced from National Diploma to Advanced Diploma; acquired Python, Java, and modern React with self-directed discipline.</p>
+              </div>
             </div>
-            <p class="edu-desc">
-              Completed with multiple academic distinctions. Consistently scored 70%+ across programming modules, software development, relational databases, and systems analysis.
-            </p>
-            <div class="edu-courses">
-              <span>Relevant modules:</span>
-              <code>Software Development (Java, Python)</code> •
-              <code>Relational Database Systems (MySQL)</code> •
-              <code>Systems Analysis & Design</code> •
-              <code>Web Development</code> •
-              <code>Business Practice & Project Management</code>
+
+            <div class="pillar-card glass-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Digitally Ready</h4>
+                <p>Comfortable with Git workflows, MySQL schemas, VS Code tooling, and Figma interfaces—adapts quickly to new toolchains.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card glass-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Analytical Problem Solving</h4>
+                <p>Decomposes complex requirements into clear, testable logic; diagnoses root causes with persistence and empirical testing.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card glass-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Business & Systems Context</h4>
+                <p>Academic training in Business Practice and Project Management ensures engineering choices serve business objectives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+          <p class="section-subtitle">
+            Academic track from Sol Plaatje University with proven results in software development and database modules.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Item 1: Advanced Diploma -->
+          <div class="timeline-item">
+            <div class="timeline-marker in-progress">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge badge-warning">In Progress • Completing 2026</span>
+                  <h3 class="timeline-degree">Advanced Diploma in ICT (Applications Development)</h3>
+                  <h4 class="timeline-institution">Sol Plaatje University | Kimberley, South Africa</h4>
+                </div>
+                <div class="timeline-period">2026 – Present</div>
+              </div>
+              <p class="timeline-summary">
+                Postgraduate qualification advancing skills in distributed enterprise architecture, modern software patterns, database engineering, and software project management.
+              </p>
+              <div class="timeline-highlights">
+                <span class="pill-chip">Advanced Software Engineering</span>
+                <span class="pill-chip">Distributed Systems</span>
+                <span class="pill-chip">Application Architecture</span>
+                <span class="pill-chip">Systems Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: National Diploma -->
+          <div class="timeline-item">
+            <div class="timeline-marker completed">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge badge-success">Completed • Distinction Record</span>
+                  <h3 class="timeline-degree">National Diploma in ICT (Applications Development)</h3>
+                  <h4 class="timeline-institution">Sol Plaatje University | Kimberley, South Africa</h4>
+                </div>
+                <div class="timeline-period">2023 – 2025</div>
+              </div>
+              <p class="timeline-summary">
+                Core 3-year applications development qualification:
+              </p>
+              <ul class="timeline-bullets">
+                <li><strong>Multiple Academic Distinctions:</strong> Achieved distinction grades across programming and database subjects.</li>
+                <li><strong>Consistent 70%+:</strong> High-performing academic average throughout systems analysis and software modules.</li>
+                <li><strong>Solid Foundations:</strong> Object-Oriented Programming (Java, Python), Relational Databases (MySQL), Systems Analysis, and Project Management.</li>
+              </ul>
+              <div class="timeline-highlights">
+                <span class="pill-chip">Software Development (Java, Python)</span>
+                <span class="pill-chip">Relational Databases (MySQL)</span>
+                <span class="pill-chip">Systems Analysis & Design</span>
+                <span class="pill-chip">Business Practice & IT Management</span>
+                <span class="pill-chip">Web Programming</span>
+              </div>
             </div>
           </div>
 
@@ -238,92 +411,518 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <p class="section-desc">Languages, databases, and tools I use on a regular basis.</p>
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Stack</span></h2>
+          <p class="section-subtitle">
+            Core programming languages, frameworks, database systems, and development tools.
+          </p>
+        </div>
 
-        <div class="skills-columns">
-          
-          <div class="skill-group">
-            <h4 class="skill-group-title">Languages</h4>
-            <ul class="skill-items">
-              <li>Python</li>
-              <li>Java</li>
-              <li>JavaScript (ES6+)</li>
-              <li>Visual Basic</li>
-              <li>SQL</li>
-            </ul>
+        <!-- Filter Tabs -->
+        <div class="skills-filter-wrapper">
+          <button class="filter-tab active" data-filter="all">All Technologies</button>
+          <button class="filter-tab" data-filter="languages">Languages</button>
+          <button class="filter-tab" data-filter="web">Web & Frontend</button>
+          <button class="filter-tab" data-filter="database">Databases</button>
+          <button class="filter-tab" data-filter="tools">Tools & DevOps</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+
+          <!-- Python -->
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box python-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.75h5.82v.825H3.852S0 5.79 0 11.904c0 6.113 3.398 5.897 3.398 5.897h2.027v-2.846s-.11-3.398 3.332-3.398h5.707v-.848s.47-5.707-2.545-5.707zm-3.2 1.76c.582 0 1.054.472 1.054 1.054 0 .582-.472 1.054-1.054 1.054a1.054 1.054 0 0 1 0-2.108zm3.37 22.24c6.095 0 5.714-2.656 5.714-2.656l-.006-2.75H11.97v-.825h8.175s3.852.44 3.852-5.674c0-6.114-3.398-5.898-3.398-5.898h-2.027v2.846s.11 3.398-3.332 3.398H9.527v.848s-.47 5.707 2.545 5.707zm3.201-1.76a1.054 1.054 0 0 1-1.054-1.054c0-.582.472-1.054 1.054-1.054.582 0 1.054.472 1.054 1.054 0 .582-.472 1.054-1.054 1.054z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <p class="skill-desc">Object-oriented programming, data structures, scripting, algorithm design, and automation.</p>
+            <div class="skill-tags">
+              <span>OOP</span>
+              <span>Scripting</span>
+              <span>Data Structures</span>
+            </div>
           </div>
 
-          <div class="skill-group">
-            <h4 class="skill-group-title">Web & Frameworks</h4>
-            <ul class="skill-items">
-              <li>FastAPI</li>
-              <li>React</li>
-              <li>HTML5 & CSS3</li>
-              <li>RESTful APIs</li>
-              <li>Responsive Design</li>
-            </ul>
+          <!-- Java -->
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box java-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.932s-1.018.677.408.895c1.684.257 3.447.271 5.867-.184 0 0 .398.376.994.593-4.524 1.48-10.675.283-7.269-1.304m12.355 4.793c-1.353.076-2.583-.178-3.563-.448.887-.417 1.55-.918 1.55-.918 1.134.195 2.128.271 3.238.163 1.002-.097 1.458-.415 1.458-.415s-.284.81-2.683 1.618M9.544 13.064c-3.151.789-2.046 2.378-1.547 2.457 2.308.366 5.807.306 9.387-.584.001 0-.712.441-1.383.673-5.26 1.442-10.742.451-7.85-1.536 1.139-.785 2.682-.998 2.682-.998s-.682-.361-1.289-.012"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Academic Core</span>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-desc">Object-oriented architecture, design patterns, encapsulation, polymorphism, and modular services.</p>
+            <div class="skill-tags">
+              <span>Core Java</span>
+              <span>OOP Design</span>
+              <span>Backend Patterns</span>
+            </div>
           </div>
 
-          <div class="skill-group">
-            <h4 class="skill-group-title">Databases & Storage</h4>
-            <ul class="skill-items">
-              <li>MySQL</li>
-              <li>SQLite</li>
-              <li>Database Normalization (3NF)</li>
-              <li>Relational Modeling</li>
-            </ul>
+          <!-- JavaScript -->
+          <div class="skill-card glass-card" data-category="languages web">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box js-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.621-1.554-1.287 0-.577.448-.829 1.114-.829.632 0 1.253.276 1.632.748l1.322-.851c-.62-.977-1.585-1.425-2.954-1.425-1.805 0-3.048 1.081-3.048 2.644 0 1.54 1.161 2.242 2.76 2.874.885.357 1.804.667 1.804 1.517 0 .69-.644.978-1.449.978-.965 0-1.631-.472-2.126-1.196l-1.334.863c.69 1.206 1.874 1.873 3.46 1.873 2.126 0 3.373-1.127 3.373-2.935v-.104zm-8.156-6.422h-1.943v6.793c0 1.414-.621 1.954-1.816 1.954-.483 0-.966-.08-1.345-.218l-.345 1.563c.483.207 1.184.345 1.989.345 2.149 0 3.46-1.092 3.46-3.414v-7.023z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Modern ES6+</span>
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <p class="skill-desc">Dynamic DOM manipulation, asynchronous programming (async/await), and event-driven architecture.</p>
+            <div class="skill-tags">
+              <span>ES6+</span>
+              <span>DOM Engine</span>
+              <span>Async API</span>
+            </div>
           </div>
 
-          <div class="skill-group">
-            <h4 class="skill-group-title">Tools & Workflow</h4>
-            <ul class="skill-items">
-              <li>Git & GitHub</li>
-              <li>VS Code</li>
-              <li>Figma (Prototyping)</li>
-              <li>Pytest (Unit Testing)</li>
-              <li>Agile / SDLC</li>
-            </ul>
+          <!-- React -->
+          <div class="skill-card glass-card" data-category="web">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box react-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M12 9.09c1.61 0 2.91 1.3 2.91 2.91s-1.3 2.91-2.91 2.91-2.91-1.3-2.91-2.91 1.3-2.91 2.91-2.91zM23.95 12c-.06-1.28-.75-2.47-1.92-3.32-.42-.31-.9-.57-1.42-.77.29-.62.48-1.29.56-1.99.16-1.42-.31-2.8-1.3-3.79-.99-.99-2.37-1.46-3.79-1.3-.7.08-1.37.27-1.99.56-.2-.52-.46-1-.77-1.42C12.47.75 11.28.06 10 0c-1.28.06-2.47.75-3.32 1.92-.31.42-.57.9-.77 1.42-.62-.29-1.29-.48-1.99-.56-1.42-.16-2.8.31-3.79 1.3-.99.99-1.46 2.37-1.3 3.79.08.7.27 1.37.56 1.99-.52.2-1 .46-1.42.77C.75 11.53.06 12.72 0 14c.06 1.28.75 2.47 1.92 3.32.42.31.9.57 1.42.77-.29.62-.48 1.29-.56 1.99-.16 1.42.31 2.8 1.3 3.79.99.99 2.37 1.46 3.79 1.3.7-.08 1.37-.27 1.99-.56.2.52.46 1 .77 1.42.85 1.17 2.04 1.86 3.32 1.92 1.28-.06 2.47-.75 3.32-1.92.31-.42.57-.9.77-1.42.62.29 1.29.48 1.99.56 1.42.16 2.8-.31 3.79-1.3.99-.99 1.46-2.37 1.3-3.79-.08-.7-.27-1.37-.56-1.99.52-.2 1-.46 1.42-.77 1.17-.85 1.86-2.04 1.92-3.32zm-2.06 1.38c-.37.95-1.07 1.76-2.01 2.31-1.39.81-3.03 1.14-4.66.97.26-.84.42-1.72.48-2.61.94-.13 1.87-.39 2.76-.79.95-.42 1.81-.99 2.53-1.69.3.56.6 1.17.9 1.81z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Frontend</span>
+            </div>
+            <h3 class="skill-name">React</h3>
+            <p class="skill-desc">Component-driven interfaces, declarative state handling, reactive hooks, and responsive UX design.</p>
+            <div class="skill-tags">
+              <span>Components</span>
+              <span>Hooks</span>
+              <span>UI State</span>
+            </div>
+          </div>
+
+          <!-- HTML5 & CSS3 -->
+          <div class="skill-card glass-card" data-category="web">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box html-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm17.6 4.7H4.9l.4 4.5h12.9l-.4 4.8-5.8 1.6-5.8-1.6-.3-3.2H3.8l.5 5.5 7.7 2.1 7.7-2.1 1.4-15.6z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">High Standard</span>
+            </div>
+            <h3 class="skill-name">HTML5 & Modern CSS3</h3>
+            <p class="skill-desc">Semantic document layout, CSS Grid/Flexbox, glassmorphism, responsive media queries, and keyframe animations.</p>
+            <div class="skill-tags">
+              <span>Semantic Web</span>
+              <span>CSS Grid / Flex</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card glass-card" data-category="database">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box mysql-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M16.56 12.32c.11-.93.2-1.93.24-2.97h2.24c-.05 1.25-.17 2.45-.33 3.57-.42-.23-1.12-.42-2.15-.6zm3.48-4.22h-3.66c.03-.49.05-.98.05-1.46 0-.84-.04-1.63-.12-2.37h3.81c.07.67.12 1.37.12 2.1 0 .61-.06 1.19-.2 1.73zm-4.9-3.83c.1.72.15 1.5.15 2.37 0 .48-.02.97-.05 1.46h-6.48c.03-.49.05-.98.05-1.46 0-.87.05-1.65.15-2.37h6.18zm-7.42 5.29h6.39c-.04 1.04-.13 2.04-.24 2.97-1.74-.29-3.92-.45-6.03-.45-.1-.84-.13-1.68-.12-2.52zm-1.84-1.46c0-.73.05-1.43.12-2.1h3.81c-.08.74-.12 1.53-.12 2.37 0 .48.02.97.05 1.46H6c-.08-.54-.12-1.12-.12-1.73z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Academic Distinction</span>
+            </div>
+            <h3 class="skill-name">MySQL & Relational Databases</h3>
+            <p class="skill-desc">Relational schema design, normalization (1NF-3NF), indexing, joins, and ACID transactions.</p>
+            <div class="skill-tags">
+              <span>SQL Queries</span>
+              <span>Schema Design</span>
+              <span>Normalization</span>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box git-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l3.01 3.012c.645-.223 1.39-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.529-.527-.667-1.297-.41-1.954l-2.76-2.76v5.828c.175.084.343.197.49.345.72.718.72 1.88 0 2.604-.718.72-1.882.72-2.6 0-.721-.723-.721-1.885 0-2.604.183-.183.398-.314.633-.391V8.332a2.385 2.385 0 0 1-.633-.391 2.384 2.384 0 0 1-.441-1.892L5.808 3.284.454 8.64c-.604.605-.604 1.582 0 2.188l10.48 10.478c.604.604 1.582.604 2.186 0l10.426-10.43c.605-.603.605-1.582 0-2.185v.239z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Version Control</span>
+            </div>
+            <h3 class="skill-name">Git & GitHub</h3>
+            <p class="skill-desc">Version control workflows, branch management, merge strategies, and team collaboration.</p>
+            <div class="skill-tags">
+              <span>Branching</span>
+              <span>GitHub Pages</span>
+              <span>CLI Workflow</span>
+            </div>
+          </div>
+
+          <!-- Tools: VS Code & Figma -->
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box figma-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M12 12c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zm0 0c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zm0-6c0-1.657-1.343-3-3-3S6 4.343 6 6s1.343 3 3 3 3-1.343 3-3zm0 0c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zm-6 12c0 1.657 1.343 3 3 3s3-1.343 3-3v-3H9c-1.657 0-3 1.343-3 3z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Design & Tooling</span>
+            </div>
+            <h3 class="skill-name">VS Code & Figma</h3>
+            <p class="skill-desc">Development environment customization, debugging tooling, and interactive UI/UX prototyping in Figma.</p>
+            <div class="skill-tags">
+              <span>Prototyping</span>
+              <span>Debugging</span>
+              <span>UI Wireframes</span>
+            </div>
+          </div>
+
+          <!-- Visual Basic -->
+          <div class="skill-card glass-card" data-category="languages">
+            <div class="skill-icon-header">
+              <div class="skill-icon-box vb-box">
+                <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="8 10 12 14 16 10"></polyline></svg>
+              </div>
+              <span class="skill-level-badge">Foundations</span>
+            </div>
+            <h3 class="skill-name">Visual Basic & Desktop Dev</h3>
+            <p class="skill-desc">Event-driven programming patterns, desktop GUI lifecycles, and business logic execution.</p>
+            <div class="skill-tags">
+              <span>Event-Driven</span>
+              <span>Desktop GUI</span>
+              <span>Systems Logic</span>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-desc">
-          I am actively looking for graduate opportunities, junior roles, and developer internships. Feel free to reach out directly.
-        </p>
+        <div class="section-header text-center">
+          <span class="section-tag">Engineering Showcase</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            Engineered solutions demonstrating technical craft, architectural design, and modern code execution.
+          </p>
+        </div>
 
-        <div class="contact-box">
-          
-          <div class="contact-detail">
-            <span class="contact-key">Email</span>
-            <div class="contact-val-group">
-              <a href="mailto:kamogelobantsheng@gmail.com" class="contact-val">kamogelobantsheng@gmail.com</a>
-              <button id="copyEmailBtn" class="copy-button" title="Copy email address">Copy</button>
+        <div class="projects-grid">
+
+          <!-- Project 1: Live Personal Portfolio -->
+          <article class="project-card glass-card">
+            <div class="project-banner project-banner-1">
+              <div class="project-status-chip status-live">
+                <span class="pulse-ring"></span>
+                <span>Production Live</span>
+              </div>
+              <div class="banner-badge-center">
+                <span class="banner-mono-tag">ENGINEERED WORKSPACE</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech-stack">
+                <span>HTML5 / CSS3</span>
+                <span>JavaScript ES6+</span>
+                <span>GitHub Pages</span>
+              </div>
+              <h3 class="project-title">Personal Developer Portfolio & CLI Platform</h3>
+              <p class="project-summary">
+                A high-performance personal developer portfolio and interactive showcase built with pure modern web technologies. Engineered with zero external dependencies, featuring a simulated dev terminal, glassmorphic design system, and full responsive accessibility.
+              </p>
+              <div class="project-features">
+                <span class="feature-tag">✓ Zero-Dependency Vanilla Architecture</span>
+                <span class="feature-tag">✓ Interactive Developer Console</span>
+                <span class="feature-tag">✓ Semantic Structure & Modern Typography</span>
+              </div>
+              <div class="project-links">
+                <a href="#home" class="btn btn-sm btn-primary">
+                  <span>Explore Site</span>
+                </a>
+                <a href="https://github.com/KamogeloBantsheng/portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View Repository</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AcademicPulse (Flagship Full-Stack Platform) -->
+          <article class="project-card glass-card project-card-flagship">
+            <div class="project-banner project-banner-2">
+              <div class="project-status-chip status-flagship">
+                <span class="pulse-ring"></span>
+                <span>Flagship Platform • Active</span>
+              </div>
+              <div class="banner-badge-center">
+                <span class="banner-mono-tag">ACADEMICPULSE PLATFORM</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech-stack">
+                <span>Python 3.14</span>
+                <span>FastAPI</span>
+                <span>SQLite (3NF)</span>
+                <span>Pytest</span>
+                <span>REST API</span>
+              </div>
+              <h3 class="project-title">AcademicPulse • Operations & Task Engine</h3>
+              <p class="project-summary">
+                An asynchronous full-stack operations and analytics platform engineered to track academic modules, compute real-time weighted continuous assessment marks, and manage task sprints through an interactive Kanban board.
+              </p>
+              <div class="project-features">
+                <span class="feature-tag">✓ Relational 3NF Schema & Foreign Key Constraints</span>
+                <span class="feature-tag">✓ Real-Time GPA & Weighted Mark Calculation Engine</span>
+                <span class="feature-tag">✓ Interactive Kanban Board & 100% Automated Test Coverage</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-sm btn-primary">
+                  <span>Connect with Me</span>
+                </a>
+                <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          <!-- Project 3: SPU Advanced Diploma Capstone (NRPJ740) -->
+          <article class="project-card glass-card">
+            <div class="project-banner project-banner-3">
+              <div class="project-status-chip status-academic">
+                <span class="pulse-ring"></span>
+                <span>Capstone • In Progress</span>
+              </div>
+              <div class="banner-badge-center">
+                <span class="banner-mono-tag">SPU POSTGRADUATE CAPSTONE</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech-stack">
+                <span>Django / Python</span>
+                <span>REST Framework</span>
+                <span>Docker</span>
+                <span>Relational DB</span>
+              </div>
+              <h3 class="project-title">Advanced Diploma Capstone (NRPJ740)</h3>
+              <p class="project-summary">
+                Final-year capstone project for the Advanced Diploma in ICT at Sol Plaatje University. Implements an enterprise full-stack architecture with modular apps, containerized backend services, custom serializers, and strict automated linting.
+              </p>
+              <div class="project-features">
+                <span class="feature-tag">✓ Modular Django REST Framework Architecture</span>
+                <span class="feature-tag">✓ Containerized Docker Development Environment</span>
+                <span class="feature-tag">✓ Automated Traceability & Engineering Best Practices</span>
+              </div>
+              <div class="project-links">
+                <span class="btn btn-sm btn-ghost" style="cursor: default; opacity: 0.85;">
+                  <span>Sol Plaatje University • 2026</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Widget -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive CLI Experience</span>
+          <h2 class="section-title">Explore Via <span class="gradient-text">Terminal</span></h2>
+          <p class="section-subtitle">
+            Type commands or click quick suggestions below to interact with my profile directly from your browser.
+          </p>
+        </div>
+
+        <div class="terminal-container glass-card">
+          <div class="terminal-bar">
+            <div class="window-controls">
+              <span class="control-dot red"></span>
+              <span class="control-dot yellow"></span>
+              <span class="control-dot green"></span>
+            </div>
+            <div class="terminal-title">kamogelo@spu-dev: ~/portfolio</div>
+            <div class="terminal-actions">
+              <button id="clearTerminalBtn" class="terminal-btn" title="Clear Terminal">Clear</button>
             </div>
           </div>
 
-          <div class="contact-detail">
-            <span class="contact-key">Phone / WhatsApp</span>
-            <span class="contact-val">+27 73 004 5462</span>
+          <div class="terminal-body" id="terminalOutput">
+            <div class="terminal-line system-msg">
+              Welcome to Kamogelo Bantsheng's interactive terminal v2.0.0.
+            </div>
+            <div class="terminal-line system-msg">
+              Type <span class="highlight-cmd">'help'</span> to see all available commands, or click any prompt below.
+            </div>
           </div>
 
-          <div class="contact-detail">
-            <span class="contact-key">Location</span>
-            <span class="contact-val">Kimberley, Northern Cape, South Africa (Open to relocation / remote)</span>
+          <!-- Prompt Input Form -->
+          <form id="terminalForm" class="terminal-input-row" autocomplete="off">
+            <span class="terminal-prompt">kamogelo@spu:~$</span>
+            <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. bio, skills, contact)..." spellcheck="false" autofocus>
+            <button type="submit" class="terminal-submit-btn" aria-label="Run command">↵</button>
+          </form>
+
+          <!-- Quick Suggestion Buttons -->
+          <div class="terminal-chips">
+            <span class="chip-label">Quick Commands:</span>
+            <button class="term-chip" data-cmd="bio">bio</button>
+            <button class="term-chip" data-cmd="skills">skills</button>
+            <button class="term-chip" data-cmd="education">education</button>
+            <button class="term-chip" data-cmd="projects">projects</button>
+            <button class="term-chip" data-cmd="recruiters">recruiters</button>
+            <button class="term-chip" data-cmd="contact">contact</button>
+            <button class="term-chip" data-cmd="help">help</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">
+            I am actively interviewing and seeking graduate opportunities. Reach out via email, phone, or send a direct message.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Direct Info Cards -->
+          <div class="contact-cards-col">
+            
+            <!-- Email Card with 1-Click Copy -->
+            <div class="contact-info-card glass-card">
+              <div class="contact-icon email-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info-details">
+                <span class="contact-label">Email Address</span>
+                <a href="mailto:kamogelobantsheng@gmail.com" class="contact-value">kamogelobantsheng@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copyEmailBtn" title="Copy email address" aria-label="Copy Email">
+                <span class="copy-text">Copy</span>
+                <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Phone / WhatsApp Card -->
+            <div class="contact-info-card glass-card">
+              <div class="contact-icon phone-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-info-details">
+                <span class="contact-label">Phone & WhatsApp</span>
+                <a href="tel:+27730045462" class="contact-value">+27 73 004 5462</a>
+              </div>
+              <a href="https://wa.me/27730045462" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                WhatsApp
+              </a>
+            </div>
+
+            <!-- LinkedIn Profile Card -->
+            <div class="contact-info-card glass-card">
+              <div class="contact-icon linkedin-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div class="contact-info-details">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">kamogelo-bantsheng</span>
+              </div>
+              <a href="https://www.linkedin.com/in/kamogelo-bantsheng-676451348" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                Connect
+              </a>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="contact-info-card glass-card">
+              <div class="contact-icon github-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="contact-info-details">
+                <span class="contact-label">GitHub Repository</span>
+                <span class="contact-value">@KamogeloBantsheng</span>
+              </div>
+              <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                Visit Profile
+              </a>
+            </div>
+
           </div>
 
-          <div class="contact-detail">
-            <span class="contact-key">Profiles</span>
-            <div class="contact-val-links">
-              <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <span class="divider">/</span>
-              <a href="https://www.linkedin.com/in/kamogelo-bantsheng-676451348" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <!-- Direct Message Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card glass-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-subtitle">Have a graduate opportunity or technical project? Send a message directly.</p>
+              
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="senderName" class="form-label">Your Name</label>
+                  <input type="text" id="senderName" class="form-control" placeholder="e.g. Sarah Ndlovu" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderEmail" class="form-label">Your Email</label>
+                  <input type="email" id="senderEmail" class="form-control" placeholder="e.g. sarah@company.co.za" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderSubject" class="form-label">Subject</label>
+                  <select id="senderSubject" class="form-control" required>
+                    <option value="Graduate Opportunity">Graduate Opportunity / Internship</option>
+                    <option value="Junior Developer Role">Junior Developer Role</option>
+                    <option value="Interview Invitation">Interview Invitation</option>
+                    <option value="General Technical Inquiry">General Technical Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderMessage" class="form-label">Message</label>
+                  <textarea id="senderMessage" class="form-control" rows="4" placeholder="Hello Kamogelo, we reviewed your portfolio and would like to discuss an opportunity..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="sendMessageBtn">
+                  <span>Send Message</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+
+              <div id="formSuccessAlert" class="alert-box alert-success" style="display: none;">
+                ✓ Message sent successfully! Your default email client was opened, or you can email directly at kamogelobantsheng@gmail.com.
+              </div>
             </div>
           </div>
 
@@ -334,80 +933,136 @@
   </main>
 
   <!-- Site Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>&copy; <span id="currentYear">2026</span> Kamogelo Bantsheng</span>
-      <span class="footer-sub">Sol Plaatje University ICT Scholar</span>
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-brand">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-name">Kamogelo Bantsheng</span>
+          <span class="brand-slash">/</span>
+          <span class="brand-bracket">&gt;</span>
+        </a>
+        <p class="footer-bio">
+          Applications Developer & ICT Graduate • Sol Plaatje University
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <span class="spu-badge">
+          Sol Plaatje University ICT Scholar
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">
+          &copy; <span id="currentYear">2026</span> Kamogelo Bantsheng. All rights reserved.
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/KamogeloBantsheng" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kamogelo-bantsheng-676451348" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:kamogelobantsheng@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Modal: CV Viewer -->
+  <!-- Modal: CV & Academic Credentials Viewer -->
   <div id="cvModal" class="modal-backdrop" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog glass-card">
       <div class="modal-header">
-        <h3 class="modal-title">Curriculum Vitae — Kamogelo Bantsheng</h3>
-        <button id="closeCvBtn" class="close-btn" aria-label="Close">✕</button>
+        <h3 class="modal-title">Curriculum Vitae • Kamogelo Bantsheng</h3>
+        <button id="closeCvBtn" class="btn-icon" aria-label="Close CV Modal">✕</button>
       </div>
-      <div class="modal-body cv-paper">
-        <div class="cv-top">
-          <h2>Kamogelo Bantsheng</h2>
-          <div class="cv-sub">Applications Developer • ICT Graduate</div>
-          <div class="cv-meta">
-            Kimberley, Northern Cape, South Africa • kamogelobantsheng@gmail.com • +27 73 004 5462
-          </div>
-        </div>
-
-        <div class="cv-sec">
-          <h4>Profile Summary</h4>
-          <p>
-            ICT graduate with a completed National Diploma in Applications Development and an Advanced Diploma in progress at Sol Plaatje University. Experienced in object-oriented programming (Python, Java), relational database design (MySQL), and web development (JavaScript, React). Strong academic record with multiple distinctions across programming subjects.
-          </p>
-        </div>
-
-        <div class="cv-sec">
-          <h4>Education</h4>
-          <div class="cv-item">
-            <div class="cv-item-h">
-              <strong>Advanced Diploma in ICT (Applications Development)</strong>
-              <span>2026 – Present</span>
+      <div class="modal-body cv-modal-body">
+        
+        <div class="cv-paper">
+          <div class="cv-header-block">
+            <h2 class="cv-name">Kamogelo Bantsheng</h2>
+            <div class="cv-subtitle">ICT Graduate | Applications Developer | Future Tech Leader</div>
+            <div class="cv-contact-strip">
+              <span>Kimberley, Northern Cape, South Africa</span> •
+              <span>kamogelobantsheng@gmail.com</span> •
+              <span>0730045462</span> •
+              <span>linkedin.com/in/kamogelo-bantsheng-676451348</span>
             </div>
-            <div class="cv-item-s">Sol Plaatje University, Kimberley</div>
           </div>
 
-          <div class="cv-item">
-            <div class="cv-item-h">
-              <strong>National Diploma in ICT (Applications Development)</strong>
-              <span>2023 – 2025</span>
+          <div class="cv-section">
+            <h4 class="cv-section-title">Professional Summary</h4>
+            <p>
+              Purpose-driven ICT graduate with a completed National Diploma in Applications Development and an Advanced Diploma in progress at Sol Plaatje University. Experienced in Object-Oriented design (Java, Python), relational databases (MySQL), and modern web interfaces. Demonstrated academic distinction, strong analytical reasoning, and leadership in collaborative environments.
+            </p>
+          </div>
+
+          <div class="cv-section">
+            <h4 class="cv-section-title">Education</h4>
+            <div class="cv-entry">
+              <div class="cv-entry-head">
+                <strong>Advanced Diploma in ICT (Applications Development)</strong>
+                <span>2026 – In Progress</span>
+              </div>
+              <div class="cv-entry-sub">Sol Plaatje University, Kimberley</div>
+              <p>Specializing in enterprise systems, software engineering frameworks, and systems integration.</p>
             </div>
-            <div class="cv-item-s">Sol Plaatje University, Kimberley (Completed with Distinctions)</div>
+            <div class="cv-entry">
+              <div class="cv-entry-head">
+                <strong>National Diploma in ICT (Applications Development)</strong>
+                <span>2023 – 2025 (Completed)</span>
+              </div>
+              <div class="cv-entry-sub">Sol Plaatje University, Kimberley</div>
+              <p>Achieved multiple distinctions and consistently maintained 70%+ scores across programming, systems analysis, databases, and business modules.</p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h4 class="cv-section-title">Core Skills</h4>
+            <ul class="cv-skills-list">
+              <li><strong>Languages:</strong> Python, Java, JavaScript (ES6+), Visual Basic</li>
+              <li><strong>Web & Databases:</strong> HTML5, CSS3, React, MySQL, Relational Database Modeling</li>
+              <li><strong>Tools & Practices:</strong> Git, GitHub, VS Code, Figma, Agile methodologies, Business Practice</li>
+            </ul>
+          </div>
+
+          <div class="cv-section">
+            <h4 class="cv-section-title">Graduate Programme Status</h4>
+            <p>
+              South African citizen by birth; unemployed graduate with &lt; 2 years experience; fully eligible for graduate development cohorts, internships, and junior roles starting <strong>February 2027</strong> (or immediate entry).
+            </p>
           </div>
         </div>
 
-        <div class="cv-sec">
-          <h4>Technical Skills</h4>
-          <p>
-            <strong>Languages:</strong> Python, Java, JavaScript (ES6+), Visual Basic, SQL<br>
-            <strong>Frameworks & Web:</strong> FastAPI, React, HTML5, CSS3, REST APIs<br>
-            <strong>Databases & Tools:</strong> MySQL, SQLite, Git, GitHub, VS Code, Figma
-          </p>
-        </div>
-
-        <div class="cv-sec">
-          <h4>Graduate Programme Eligibility</h4>
-          <p>
-            South African citizen by birth; unemployed graduate with less than 2 years formal experience; eligible for graduate intake programs and internships starting February 2027 or earlier.
-          </p>
-        </div>
       </div>
       <div class="modal-footer">
-        <button id="printCvBtn" class="btn btn-primary btn-sm">Print / Save PDF</button>
-        <button id="closeCvFooterBtn" class="btn btn-ghost btn-sm">Close</button>
+        <button id="printCvBtn" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print / Save as PDF</span>
+        </button>
+        <button id="closeCvFooterBtn" class="btn btn-secondary">Close</button>
       </div>
     </div>
   </div>
 
-  <div id="toast" class="toast"></div>
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-notification" aria-live="polite"></div>
 
+  <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>
 </html>
